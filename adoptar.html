@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Solicita la adopción de una mascota en PetAdopt. Rellena el formulario y nuestro equipo se pondrá en contacto contigo en 24h." />
+  <meta name="theme-color" content="#2E7D32" />
+  <title>Solicitar adopción — PetAdopt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="PetAdopt — ir a inicio">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-heart-fill"></i></span>
+          PetAdopt
+        </a>
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false"
+          aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="mascotas.html">Mascotas</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="adoptar.html">Adoptar</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary" href="adoptar.html">
+                <i class="bi bi-heart me-1" aria-hidden="true"></i>Solicitar adopción
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── Page header ──────────────────────────────────────── -->
+    <section class="page-header" aria-labelledby="page-heading">
+      <div class="container">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="mascotas.html">Mascotas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Solicitar adopción</li>
+          </ol>
+        </nav>
+        <h1 id="page-heading" class="section-title mb-2" data-aos="fade-up">
+          Solicitar adopción
+        </h1>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="50">
+          Rellena el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24h.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Formulario + sidebar ──────────────────────────────── -->
+    <section class="form-section" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+
+          <!-- Sidebar info -->
+          <div class="col-lg-4 col-xl-3" data-aos="fade-right">
+            <aside class="info-sidebar" aria-label="Información del proceso de adopción">
+              <h2>El proceso</h2>
+
+              <div class="sidebar-step">
+                <div class="ss-num" aria-hidden="true">1</div>
+                <div class="ss-text">
+                  <strong>Rellena el formulario</strong>
+                  <span>Cuéntanos sobre ti y tu hogar</span>
+                </div>
+              </div>
+              <div class="sidebar-step">
+                <div class="ss-num" aria-hidden="true">2</div>
+                <div class="ss-text">
+                  <strong>Revisamos tu solicitud</strong>
+                  <span>En menos de 24h</span>
+                </div>
+              </div>
+              <div class="sidebar-step">
+                <div class="ss-num" aria-hidden="true">3</div>
+                <div class="ss-text">
+                  <strong>Entrevista y visita</strong>
+                  <span>Nos conocemos en persona</span>
+                </div>
+              </div>
+              <div class="sidebar-step">
+                <div class="ss-num" aria-hidden="true">4</div>
+                <div class="ss-text">
+                  <strong>¡A casa!</strong>
+                  <span>Firmas y llevas a tu compañero</span>
+                </div>
+              </div>
+
+              <hr style="border-color:rgba(255,255,255,.2);margin:1.5rem 0" />
+
+              <div class="d-flex align-items-center gap-2 mb-2" style="font-size:.875rem">
+                <i class="bi bi-shield-check fs-5" aria-hidden="true"></i>
+                Proceso 100% gratuito
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-2" style="font-size:.875rem">
+                <i class="bi bi-clock fs-5" aria-hidden="true"></i>
+                Respuesta en &lt; 24h
+              </div>
+              <div class="d-flex align-items-center gap-2" style="font-size:.875rem">
+                <i class="bi bi-headset fs-5" aria-hidden="true"></i>
+                Soporte continuo post-adopción
+              </div>
+            </aside>
+          </div>
+
+          <!-- Formulario -->
+          <div class="col-lg-8 col-xl-7" data-aos="fade-left">
+            <div class="form-card">
+              <h2 id="form-heading" class="h4 mb-1">Tu solicitud de adopción</h2>
+              <p class="text-muted small mb-4">Los campos marcados con <span aria-label="asterisco, campo obligatorio">*</span> son obligatorios.</p>
+
+              <!-- Mensaje de éxito (oculto inicialmente) -->
+              <div id="form-success" hidden tabindex="-1"
+                   role="alert" aria-live="assertive"
+                   class="alert alert-success d-flex align-items-start gap-3 p-4">
+                <i class="bi bi-check-circle-fill fs-3 text-success mt-1 flex-shrink-0" aria-hidden="true"></i>
+                <div>
+                  <h3 class="h5 mb-1">¡Solicitud enviada con éxito!</h3>
+                  <p class="mb-2">Hemos recibido tu solicitud de adopción. Nuestro equipo la revisará y se pondrá en contacto contigo en menos de 24 horas.</p>
+                  <a href="mascotas.html" class="btn btn-success btn-sm">
+                    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Ver más mascotas
+                  </a>
+                </div>
+              </div>
+
+              <!-- El formulario -->
+              <form id="adoption-form" novalidate aria-label="Formulario de solicitud de adopción">
+
+                <!-- Sección: Datos personales -->
+                <fieldset class="mb-4">
+                  <legend class="h6 text-primary border-bottom pb-2 mb-3">
+                    <i class="bi bi-person me-2" aria-hidden="true"></i>Datos personales
+                  </legend>
+
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="nombre" class="form-label">Nombre <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="nombre" name="nombre"
+                             placeholder="Tu nombre"
+                             required
+                             minlength="2"
+                             maxlength="50"
+                             autocomplete="given-name"
+                             aria-describedby="nombre-feedback" />
+                      <div id="nombre-feedback" class="invalid-feedback">
+                        Por favor, introduce tu nombre (mínimo 2 caracteres).
+                      </div>
+                      <div class="valid-feedback">¡Perfecto!</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="apellidos" class="form-label">Apellidos <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="apellidos" name="apellidos"
+                             placeholder="Tus apellidos"
+                             required
+                             minlength="2"
+                             maxlength="80"
+                             autocomplete="family-name"
+                             aria-describedby="apellidos-feedback" />
+                      <div id="apellidos-feedback" class="invalid-feedback">
+                        Por favor, introduce tus apellidos.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="email" class="form-label">Correo electrónico <span aria-label="campo obligatorio">*</span></label>
+                      <input type="email" class="form-control" id="email" name="email"
+                             placeholder="tucorreo@ejemplo.com"
+                             required
+                             autocomplete="email"
+                             aria-describedby="email-feedback email-hint" />
+                      <div id="email-hint" class="form-text">Recibirás la confirmación aquí.</div>
+                      <div id="email-feedback" class="invalid-feedback">
+                        Introduce un correo electrónico válido.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="telefono" class="form-label">Teléfono <span aria-label="campo obligatorio">*</span></label>
+                      <input type="tel" class="form-control" id="telefono" name="telefono"
+                             placeholder="600 000 000"
+                             required
+                             pattern="[6-9][0-9]{8}"
+                             autocomplete="tel"
+                             aria-describedby="telefono-feedback telefono-hint" />
+                      <div id="telefono-hint" class="form-text">Solo España: 9 dígitos comenzando por 6, 7, 8 o 9.</div>
+                      <div id="telefono-feedback" class="invalid-feedback">
+                        Introduce un teléfono español válido (ej: 612345678).
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="fecha-nacimiento" class="form-label">Fecha de nacimiento <span aria-label="campo obligatorio">*</span></label>
+                      <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento"
+                             required
+                             max="2007-04-20"
+                             autocomplete="bday"
+                             aria-describedby="bday-feedback" />
+                      <div id="bday-feedback" class="invalid-feedback">
+                        Debes ser mayor de 18 años para adoptar.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="dni" class="form-label">DNI / NIE <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="dni" name="dni"
+                             placeholder="12345678A"
+                             required
+                             pattern="[0-9XYZ][0-9]{7}[A-Z]"
+                             maxlength="9"
+                             style="text-transform:uppercase"
+                             aria-describedby="dni-feedback" />
+                      <div id="dni-feedback" class="invalid-feedback">
+                        Introduce un DNI/NIE válido (8 números + letra).
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Sección: Domicilio -->
+                <fieldset class="mb-4">
+                  <legend class="h6 text-primary border-bottom pb-2 mb-3">
+                    <i class="bi bi-house me-2" aria-hidden="true"></i>Tu domicilio
+                  </legend>
+
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="direccion" class="form-label">Dirección <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="direccion" name="direccion"
+                             placeholder="Calle, número, piso…"
+                             required
+                             autocomplete="street-address"
+                             aria-describedby="dir-feedback" />
+                      <div id="dir-feedback" class="invalid-feedback">Introduce tu dirección.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="ciudad" class="form-label">Ciudad <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="ciudad" name="ciudad"
+                             placeholder="Madrid"
+                             required
+                             autocomplete="address-level2"
+                             aria-describedby="ciudad-feedback" />
+                      <div id="ciudad-feedback" class="invalid-feedback">Introduce tu ciudad.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="cp" class="form-label">Código postal <span aria-label="campo obligatorio">*</span></label>
+                      <input type="text" class="form-control" id="cp" name="cp"
+                             placeholder="28001"
+                             required
+                             pattern="[0-9]{5}"
+                             maxlength="5"
+                             inputmode="numeric"
+                             autocomplete="postal-code"
+                             aria-describedby="cp-feedback" />
+                      <div id="cp-feedback" class="invalid-feedback">Introduce un código postal de 5 dígitos.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="tipo-vivienda" class="form-label">Tipo de vivienda <span aria-label="campo obligatorio">*</span></label>
+                      <select class="form-select" id="tipo-vivienda" name="tipo-vivienda"
+                              required aria-describedby="vivienda-feedback">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="piso-sin-terraza">Piso sin terraza</option>
+                        <option value="piso-con-terraza">Piso con terraza</option>
+                        <option value="casa-sin-jardin">Casa sin jardín</option>
+                        <option value="casa-con-jardin">Casa con jardín</option>
+                      </select>
+                      <div id="vivienda-feedback" class="invalid-feedback">Selecciona el tipo de vivienda.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label class="form-label">¿Tienes otros animales?</label>
+                      <div class="d-flex gap-3 pt-1" role="radiogroup" aria-label="¿Tienes otros animales?">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="otros-animales" id="ani-si" value="si" />
+                          <label class="form-check-label" for="ani-si">Sí</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="otros-animales" id="ani-no" value="no" checked />
+                          <label class="form-check-label" for="ani-no">No</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Sección: Preferencias -->
+                <fieldset class="mb-4">
+                  <legend class="h6 text-primary border-bottom pb-2 mb-3">
+                    <i class="bi bi-search-heart me-2" aria-hidden="true"></i>Preferencias de adopción
+                  </legend>
+
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="especie" class="form-label">Especie preferida <span aria-label="campo obligatorio">*</span></label>
+                      <select class="form-select" id="especie" name="especie"
+                              required aria-describedby="especie-feedback">
+                        <option value="" disabled selected>Selecciona una especie</option>
+                        <option value="perro">Perro 🐶</option>
+                        <option value="gato">Gato 🐱</option>
+                        <option value="conejo">Conejo 🐰</option>
+                        <option value="indiferente">Me es indiferente</option>
+                      </select>
+                      <div id="especie-feedback" class="invalid-feedback">Selecciona una especie.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="experiencia" class="form-label">Experiencia con mascotas <span aria-label="campo obligatorio">*</span></label>
+                      <select class="form-select" id="experiencia" name="experiencia"
+                              required aria-describedby="exp-feedback">
+                        <option value="" disabled selected>Tu nivel de experiencia</option>
+                        <option value="ninguna">Sin experiencia previa</option>
+                        <option value="poca">Poca experiencia</option>
+                        <option value="moderada">Experiencia moderada</option>
+                        <option value="mucha">Mucha experiencia</option>
+                      </select>
+                      <div id="exp-feedback" class="invalid-feedback">Selecciona tu nivel de experiencia.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="motivo" class="form-label">
+                        ¿Por qué quieres adoptar? <span aria-label="campo obligatorio">*</span>
+                      </label>
+                      <textarea class="form-control" id="motivo" name="motivo"
+                                rows="4"
+                                placeholder="Cuéntanos tu historia y por qué crees que serías un buen adoptante…"
+                                required
+                                minlength="50"
+                                maxlength="1000"
+                                aria-describedby="motivo-feedback motivo-hint"></textarea>
+                      <div id="motivo-hint" class="form-text">Mínimo 50 caracteres.</div>
+                      <div id="motivo-feedback" class="invalid-feedback">
+                        Por favor, explica tu motivación (mínimo 50 caracteres).
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Sección: Condiciones -->
+                <fieldset class="mb-4">
+                  <legend class="h6 text-primary border-bottom pb-2 mb-3">
+                    <i class="bi bi-file-text me-2" aria-hidden="true"></i>Condiciones y privacidad
+                  </legend>
+
+                  <div class="row g-2">
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos"
+                               required aria-describedby="terminos-feedback" />
+                        <label class="form-check-label" for="terminos">
+                          Acepto los <a href="#" class="text-primary">términos y condiciones</a>
+                          y la <a href="#" class="text-primary">política de privacidad</a>
+                          de PetAdopt. <span aria-label="campo obligatorio">*</span>
+                        </label>
+                        <div id="terminos-feedback" class="invalid-feedback">
+                          Debes aceptar los términos y condiciones.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="responsabilidad" name="responsabilidad"
+                               required aria-describedby="resp-feedback" />
+                        <label class="form-check-label" for="responsabilidad">
+                          Me comprometo a cuidar responsablemente de la mascota y a comunicar
+                          cualquier problema a PetAdopt. <span aria-label="campo obligatorio">*</span>
+                        </label>
+                        <div id="resp-feedback" class="invalid-feedback">
+                          Debes confirmar tu compromiso de responsabilidad.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" />
+                        <label class="form-check-label" for="newsletter">
+                          Quiero recibir novedades y consejos para nuevos adoptantes (opcional).
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Submit -->
+                <div class="d-flex flex-wrap align-items-center gap-3">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-send me-2" aria-hidden="true"></i>Enviar solicitud
+                  </button>
+                  <a href="mascotas.html" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>Volver a mascotas
+                  </a>
+                </div>
+
+                <p class="text-muted small mt-3 mb-0">
+                  <i class="bi bi-lock me-1" aria-hidden="true"></i>
+                  Tu información está protegida y no será compartida con terceros.
+                </p>
+
+              </form>
+            </div><!-- /.form-card -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <i class="bi bi-heart-fill text-success" aria-hidden="true"></i>PetAdopt
+          </a>
+          <p>Conectamos mascotas en espera de hogar con familias que les darán el amor que merecen.</p>
+          <div class="footer-social" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="adoptar.html">Adoptar</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Mascotas</h5>
+          <ul>
+            <li><a href="mascotas.html">Perros</a></li>
+            <li><a href="mascotas.html">Gatos</a></li>
+            <li><a href="mascotas.html">Conejos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <ul>
+            <li><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:hola@petadopt.es">hola@petadopt.es</a></li>
+            <li><i class="bi bi-telephone me-2" aria-hidden="true"></i><a href="tel:+34900000000">900 000 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2025 PetAdopt · <a href="#">Privacidad</a> · <a href="#">Términos</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Volver al inicio de la página">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmhXFCELU48kP9b3bkbNtFJtW0" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

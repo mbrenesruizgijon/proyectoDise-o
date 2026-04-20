@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PetAdopt — Encuentra a tu compañero perfecto y dale una segunda oportunidad. Adopción de perros, gatos y conejos en toda España." />
+  <meta name="theme-color" content="#2E7D32" />
+  <title>PetAdopt — Adopta, no compres</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="PetAdopt — Adopta, no compres" />
+  <meta property="og:description" content="Plataforma de adopción de mascotas en España." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- CSS compilado -->
+  <link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+
+  <!-- Skip to main content (accesibilidad) -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ── Navbar ───────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" aria-label="Navegación principal">
+      <div class="container">
+
+        <a class="navbar-brand" href="index.html" aria-label="PetAdopt — ir a inicio">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-heart-fill"></i></span>
+          PetAdopt
+        </a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false"
+          aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="mascotas.html">Mascotas</a></li>
+            <li class="nav-item"><a class="nav-link" href="adoptar.html">Adoptar</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary" href="adoptar.html">
+                <i class="bi bi-heart me-1" aria-hidden="true"></i>Solicitar adopción
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+              <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+              Más de 3.000 adopciones exitosas
+            </div>
+
+            <h1 id="hero-heading" data-aos="fade-up" data-aos-delay="50">
+              Dale una segunda<br>
+              oportunidad a un<br>
+              <span class="highlight">amigo peludo</span>
+            </h1>
+
+            <p class="lead text-muted mt-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+              Conectamos mascotas en espera de hogar con familias que les darán
+              el amor que merecen. Adoptar es el acto más bonito que puedes hacer.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="150">
+              <a href="mascotas.html" class="btn btn-primary btn-lg">
+                <i class="bi bi-search-heart me-2" aria-hidden="true"></i>Ver mascotas
+              </a>
+              <a href="#como-funciona" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-play-circle me-2" aria-hidden="true"></i>Cómo funciona
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="d-flex align-items-center gap-2 text-muted small">
+                <i class="bi bi-shield-check text-success fs-5" aria-hidden="true"></i>
+                Proceso seguro y verificado
+              </div>
+              <div class="d-flex align-items-center gap-2 text-muted small">
+                <i class="bi bi-geo-alt text-primary fs-5" aria-hidden="true"></i>
+                Toda España
+              </div>
+              <div class="d-flex align-items-center gap-2 text-muted small">
+                <i class="bi bi-telephone text-secondary fs-5" aria-hidden="true"></i>
+                Soporte 7/7
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="hero-img-wrap">
+              <img src="https://picsum.photos/seed/petdog/600/520"
+                   alt="Perro golden retriever feliz en un parque con su nueva familia"
+                   width="600" height="520" />
+
+              <div class="floating-badge badge-top" aria-hidden="true">
+                <span class="icon">🐾</span>
+                <div>
+                  <strong class="d-block" style="font-size:.8rem">¡Nuevo!</strong>
+                  <span style="font-size:.75rem;color:#757575">12 mascotas esta semana</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bot" aria-hidden="true">
+                <span class="icon">❤️</span>
+                <div>
+                  <strong class="d-block" style="font-size:.8rem">Adoptados hoy</strong>
+                  <span style="font-size:.75rem;color:#757575">+8 mascotas felices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Stats ─────────────────────────────────────────────── -->
+    <section class="stats-bar" aria-label="Estadísticas de adopción">
+      <div class="container">
+        <div class="row g-0 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <span class="stat-number" data-count="3247" aria-label="3.247 mascotas adoptadas">0</span>
+              <span class="stat-label">Mascotas adoptadas</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <span class="stat-number" data-count="180" aria-label="180 mascotas disponibles">0</span>
+              <span class="stat-label">Disponibles ahora</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <span class="stat-number" data-count="64" aria-label="64 refugios colaboradores">0</span>
+              <span class="stat-label">Refugios colaboradores</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <span class="stat-number" data-count="5" aria-label="5 años de experiencia">0</span>
+              <span class="stat-label">Años de experiencia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Por qué adoptar ────────────────────────────────────── -->
+    <section class="py-6 py-lg-7" id="por-que" aria-labelledby="porque-heading">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Razones para adoptar</span>
+          <h2 class="section-title" id="porque-heading">¿Por qué adoptar?</h2>
+          <div class="divider"></div>
+          <p class="text-muted mx-auto" style="max-width:540px">
+            Adoptar cambia dos vidas: la del animal que recibes y la tuya.
+            Descubre todo lo que ganarás con este acto de amor.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-heart-pulse"></i></div>
+              <h3>Salvas una vida</h3>
+              <p>Los animales en refugios necesitan un hogar urgentemente. Tu decisión puede ser la diferencia entre la vida y la eutanasia.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-currency-euro"></i></div>
+              <h3>Más económico</h3>
+              <p>Los animales adoptados suelen estar vacunados, esterilizados y con chip. Un ahorro significativo desde el primer día.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-emoji-smile"></i></div>
+              <h3>Compañero leal</h3>
+              <p>Los animales adoptados suelen mostrar una gratitud especial. Crean vínculos increíblemente fuertes con su nueva familia.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-shield-check"></i></div>
+              <h3>Proceso verificado</h3>
+              <p>Todos nuestros refugios están acreditados. Conocerás el historial médico y el temperamento del animal antes de adoptar.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-people"></i></div>
+              <h3>Acompañamiento</h3>
+              <p>Nuestro equipo de voluntarios te guiará durante los primeros meses para que la adaptación sea lo más suave posible.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true"><i class="bi bi-tree"></i></div>
+              <h3>Impacto ambiental</h3>
+              <p>Frenas la cría industrial irresponsable. Adoptar es la opción más sostenible y ética para aumentar tu familia.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Mascotas destacadas ────────────────────────────────── -->
+    <section class="py-6 py-lg-7 bg-light-green" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-5 flex-wrap gap-3">
+          <div data-aos="fade-right">
+            <span class="section-label">Conoce a nuestros amigos</span>
+            <h2 class="section-title mb-0" id="featured-heading">Mascotas destacadas</h2>
+          </div>
+          <a href="mascotas.html" class="btn btn-outline-primary" data-aos="fade-left">
+            Ver todas <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Carousel -->
+        <div id="petCarousel" class="carousel slide" data-bs-ride="carousel" aria-roledescription="carrusel" aria-label="Mascotas destacadas">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+            <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" aria-roledescription="diapositiva" aria-label="Mascotas 1 a 3">
+              <div class="row g-4 px-2">
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/labrador/400/300" alt="Labrador marrón llamado Bruno, 2 años" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐶 Perro</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Bruno</h3>
+                      <p class="pet-breed">Labrador · 2 años · Macho</p>
+                      <div class="pet-tags">
+                        <span class="tag">Vacunado</span>
+                        <span class="tag">Esterilizado</span>
+                        <span class="tag">Con chip</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Bruno</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/catsiamese/400/300" alt="Gata siamesa llamada Luna, 3 años" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐱 Gato</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Luna</h3>
+                      <p class="pet-breed">Siamés · 3 años · Hembra</p>
+                      <div class="pet-tags">
+                        <span class="tag">Vacunada</span>
+                        <span class="tag">Esterilizada</span>
+                        <span class="tag">Interior</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Luna</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/beagledog/400/300" alt="Beagle llamado Max, 1 año" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐶 Perro</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Max</h3>
+                      <p class="pet-breed">Beagle · 1 año · Macho</p>
+                      <div class="pet-tags">
+                        <span class="tag">Vacunado</span>
+                        <span class="tag">Juguetón</span>
+                        <span class="tag">Con chip</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Max</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" aria-roledescription="diapositiva" aria-label="Mascotas 4 a 6">
+              <div class="row g-4 px-2">
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/orangecat/400/300" alt="Gato naranja llamado Mango, 4 años" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐱 Gato</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Mango</h3>
+                      <p class="pet-breed">Europeo · 4 años · Macho</p>
+                      <div class="pet-tags">
+                        <span class="tag">Vacunado</span>
+                        <span class="tag">Tranquilo</span>
+                        <span class="tag">Con chip</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Mango</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/whiterabbit/400/300" alt="Conejo blanco llamado Nieve, 2 años" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐰 Conejo</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Nieve</h3>
+                      <p class="pet-breed">Rex · 2 años · Hembra</p>
+                      <div class="pet-tags">
+                        <span class="tag">Esterilizada</span>
+                        <span class="tag">Sociable</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Nieve</a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-4">
+                  <article class="pet-card">
+                    <div class="pet-img">
+                      <img src="https://picsum.photos/seed/bordercollie/400/300" alt="Border Collie llamada Cleo, 3 años" loading="lazy" width="400" height="300" />
+                      <span class="pet-species">🐶 Perro</span>
+                    </div>
+                    <div class="pet-body">
+                      <h3 class="pet-name">Cleo</h3>
+                      <p class="pet-breed">Border Collie · 3 años · Hembra</p>
+                      <div class="pet-tags">
+                        <span class="tag">Vacunada</span>
+                        <span class="tag">Activa</span>
+                        <span class="tag">Con chip</span>
+                      </div>
+                      <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar a Cleo</a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Cómo funciona ──────────────────────────────────────── -->
+    <section class="py-6 py-lg-7" id="como-funciona" aria-labelledby="proceso-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="section-label">Simple y transparente</span>
+            <h2 class="section-title" id="proceso-heading">El proceso de adopción</h2>
+            <div class="divider" style="margin:0 0 1.5rem"></div>
+            <p class="text-muted">
+              Hemos diseñado un proceso sencillo y humano para asegurarnos de que
+              cada mascota encuentre el hogar que realmente merece.
+            </p>
+            <a href="adoptar.html" class="btn btn-primary mt-3">Empezar ahora</a>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <ol class="list-unstyled" aria-label="Pasos del proceso de adopción">
+              <li class="step-item">
+                <div class="step-number" aria-hidden="true">1</div>
+                <div class="step-content">
+                  <h3>Explora nuestras mascotas</h3>
+                  <p>Navega por el catálogo y filtra por especie, edad o tamaño hasta encontrar a tu compañero ideal.</p>
+                </div>
+              </li>
+              <li class="step-item">
+                <div class="step-number" aria-hidden="true">2</div>
+                <div class="step-content">
+                  <h3>Rellena el formulario</h3>
+                  <p>Cuéntanos sobre ti y tu hogar. Un proceso sencillo que nos ayuda a garantizar el bienestar del animal.</p>
+                </div>
+              </li>
+              <li class="step-item">
+                <div class="step-number" aria-hidden="true">3</div>
+                <div class="step-content">
+                  <h3>Entrevista y visita</h3>
+                  <p>Nuestro equipo se pondrá en contacto para organizar una visita y conoceros en persona.</p>
+                </div>
+              </li>
+              <li class="step-item">
+                <div class="step-number" aria-hidden="true">4</div>
+                <div class="step-content">
+                  <h3>¡Bienvenido a la familia!</h3>
+                  <p>Firmas el contrato de adopción y te llevas a tu nuevo mejor amigo a casa. ¡Empezará una aventura increíble!</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Testimonios ────────────────────────────────────────── -->
+    <section class="py-6 py-lg-7 bg-light" aria-labelledby="testimonios-heading">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Familias felices</span>
+          <h2 class="section-title" id="testimonios-heading">Lo que dicen nuestros adoptantes</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <blockquote>
+                "Adoptamos a Bruno hace seis meses y ha sido lo mejor que nos ha pasado. El proceso fue muy sencillo y el equipo de PetAdopt nos acompañó en todo momento."
+              </blockquote>
+              <div class="author">
+                <img src="https://picsum.photos/seed/person1/100/100" alt="Foto de perfil de Laura García" width="44" height="44" loading="lazy" />
+                <div>
+                  <strong>Laura García</strong>
+                  <span>Madrid · adoptó a Bruno</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <blockquote>
+                "Luna llegó asustada y en pocos días se convirtió en la dueña de la casa. PetAdopt me dio todo el soporte que necesité. Muy recomendable."
+              </blockquote>
+              <div class="author">
+                <img src="https://picsum.photos/seed/person2/100/100" alt="Foto de perfil de Carlos Ramos" width="44" height="44" loading="lazy" />
+                <div>
+                  <strong>Carlos Ramos</strong>
+                  <span>Barcelona · adoptó a Luna</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <blockquote>
+                "Nieve, nuestra conejita, ya lleva un año con nosotros y no me imagino la vida sin ella. El equipo fue muy profesional y cariñoso durante todo el proceso."
+              </blockquote>
+              <div class="author">
+                <img src="https://picsum.photos/seed/person3/100/100" alt="Foto de perfil de Ana Molina" width="44" height="44" loading="lazy" />
+                <div>
+                  <strong>Ana Molina</strong>
+                  <span>Valencia · adoptó a Nieve</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA final ──────────────────────────────────────────── -->
+    <section class="py-5" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-section" data-aos="zoom-in">
+          <span class="section-label" style="color:rgba(255,255,255,.7)">¿Preparado?</span>
+          <h2 class="mt-1 mb-3" id="cta-heading">
+            <i class="bi bi-heart-fill me-2" aria-hidden="true"></i>
+            Tu próximo amigo te espera
+          </h2>
+          <p class="mb-4 mx-auto" style="max-width:480px">
+            Cientos de mascotas buscan un hogar lleno de amor. Adoptar es fácil,
+            seguro y la mejor decisión que tomarás este año.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a href="mascotas.html" class="btn btn-light btn-lg text-primary fw-bold">
+              <i class="bi bi-search-heart me-2" aria-hidden="true"></i>Ver mascotas
+            </a>
+            <a href="adoptar.html" class="btn btn-outline-light btn-lg">
+              Solicitar adopción
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html" aria-label="PetAdopt inicio">
+            <i class="bi bi-heart-fill text-success" aria-hidden="true"></i>
+            PetAdopt
+          </a>
+          <p>Conectamos mascotas en espera de hogar con familias que les darán el amor que merecen.</p>
+          <div class="footer-social" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook de PetAdopt"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram de PetAdopt"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter de PetAdopt"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok de PetAdopt"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="adoptar.html">Adoptar</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Mascotas</h5>
+          <ul>
+            <li><a href="mascotas.html?filter=perros">Perros</a></li>
+            <li><a href="mascotas.html?filter=gatos">Gatos</a></li>
+            <li><a href="mascotas.html?filter=conejos">Conejos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <ul>
+            <li><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:hola@petadopt.es">hola@petadopt.es</a></li>
+            <li><i class="bi bi-telephone me-2" aria-hidden="true"></i><a href="tel:+34900000000">900 000 000</a></li>
+            <li><i class="bi bi-geo-alt me-2" aria-hidden="true"></i>Disponible en toda España</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">
+          &copy; 2025 PetAdopt — Hecho con <span aria-label="amor">❤️</span> por adoptantes, para adoptantes.
+          <span class="mx-2" aria-hidden="true">·</span>
+          <a href="#">Privacidad</a>
+          <span class="mx-2" aria-hidden="true">·</span>
+          <a href="#">Términos</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Volver al inicio de la página">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmhXFCELU48kP9b3bkbNtFJtW0" crossorigin="anonymous"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- App JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

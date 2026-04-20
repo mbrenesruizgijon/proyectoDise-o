@@ -1,0 +1,91 @@
+// ============================================================
+// PETADOPT — Personalización de variables Bootstrap 5
+// ============================================================
+
+// Paleta de colores
+$primary:           #2E7D32;   // verde bosque
+$secondary:         #FF8F00;   // ámbar cálido
+$success:           #43A047;
+$info:              #0288D1;
+$warning:           #F9A825;
+$danger:            #C62828;
+$light:             #F9FBF7;
+$dark:              #1B1B1B;
+
+// Colores propios
+$color-accent:      #81C784;
+$color-surface:     #FFFFFF;
+$color-muted:       #757575;
+$color-border:      #E0E0E0;
+
+// Tipografía
+$font-family-sans-serif: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+$font-size-base:     1rem;
+$font-size-sm:       0.875rem;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold:   700;
+$line-height-base:   1.6;
+$headings-font-weight: 700;
+$headings-line-height: 1.25;
+
+// Espaciado
+$spacer:             1rem;
+
+// Bordes y sombras
+$border-radius:       0.5rem;
+$border-radius-sm:    0.375rem;
+$border-radius-lg:    0.75rem;
+$border-radius-pill:  50rem;
+$border-color:        $color-border;
+
+$box-shadow-sm:       0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+$box-shadow:          0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06);
+$box-shadow-lg:       0 10px 15px -3px rgba(0,0,0,.10), 0 4px 6px -2px rgba(0,0,0,.05);
+
+// Navbar
+$navbar-padding-y:       0.875rem;
+$navbar-brand-font-size: 1.35rem;
+$navbar-light-color:     rgba($dark, .75);
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+// Cards
+$card-border-radius:   $border-radius-lg;
+$card-border-color:    $color-border;
+$card-box-shadow:      $box-shadow;
+$card-cap-bg:          transparent;
+$card-spacer-y:        1.25rem;
+$card-spacer-x:        1.25rem;
+
+// Botones
+$btn-padding-y:        0.6rem;
+$btn-padding-x:        1.5rem;
+$btn-font-weight:      $font-weight-medium;
+$btn-border-radius:    $border-radius-pill;
+$btn-padding-y-lg:     0.8rem;
+$btn-padding-x-lg:     2rem;
+
+// Inputs
+$input-border-radius:     $border-radius;
+$input-padding-y:         0.65rem;
+$input-padding-x:         1rem;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow:  0 0 0 0.25rem rgba($primary, .2);
+$input-border-color:      $color-border;
+
+// Badge
+$badge-border-radius:  $border-radius-sm;
+$badge-padding-y:      0.35em;
+$badge-padding-x:      0.65em;
+
+// Carousel
+$carousel-control-color:       #fff;
+$carousel-indicator-active-bg: $primary;
+
+// Transiciones
+$transition-base:    all .2s ease-in-out;
+$transition-fade:    opacity .15s linear;
+
+// Breakpoints (sin cambios, solo referencia)
+// xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px

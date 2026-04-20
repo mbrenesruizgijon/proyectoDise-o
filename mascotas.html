@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explora todas las mascotas disponibles para adopción en PetAdopt: perros, gatos y conejos que esperan un hogar lleno de amor." />
+  <meta name="theme-color" content="#2E7D32" />
+  <title>Mascotas disponibles — PetAdopt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="dist/css/main.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ── Navbar ─────────────────────────────────────────────── -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="PetAdopt — ir a inicio">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-heart-fill"></i></span>
+          PetAdopt
+        </a>
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false"
+          aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="mascotas.html">Mascotas</a></li>
+            <li class="nav-item"><a class="nav-link" href="adoptar.html">Adoptar</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary" href="adoptar.html">
+                <i class="bi bi-heart me-1" aria-hidden="true"></i>Solicitar adopción
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── Page header ──────────────────────────────────────── -->
+    <section class="page-header" aria-labelledby="page-heading">
+      <div class="container">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mascotas</li>
+          </ol>
+        </nav>
+        <h1 id="page-heading" class="section-title mb-2" data-aos="fade-up">
+          Mascotas disponibles
+        </h1>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="50">
+          Conoce a todos los animales que esperan un hogar lleno de amor.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Filtros y búsqueda ────────────────────────────────── -->
+    <section class="py-4 bg-white border-bottom" aria-label="Filtrar mascotas">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center gap-3">
+
+          <!-- Búsqueda -->
+          <div class="flex-grow-1" style="max-width:320px">
+            <label for="pet-search" class="visually-hidden">Buscar mascota por nombre o raza</label>
+            <div class="input-group">
+              <span class="input-group-text" aria-hidden="true">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="search" id="pet-search" class="form-control"
+                placeholder="Buscar por nombre o raza…"
+                aria-label="Buscar mascota por nombre o raza" />
+            </div>
+          </div>
+
+          <!-- Filtros -->
+          <div class="d-flex gap-2 flex-wrap" role="group" aria-label="Filtrar por especie">
+            <button class="filter-btn active" data-filter="todos" aria-pressed="true">
+              <i class="bi bi-grid-3x3-gap me-1" aria-hidden="true"></i>Todos
+            </button>
+            <button class="filter-btn" data-filter="perro" aria-pressed="false">
+              <i class="bi bi-emoji-smile me-1" aria-hidden="true"></i>Perros
+            </button>
+            <button class="filter-btn" data-filter="gato" aria-pressed="false">
+              🐱 Gatos
+            </button>
+            <button class="filter-btn" data-filter="conejo" aria-pressed="false">
+              🐰 Conejos
+            </button>
+          </div>
+
+          <!-- Estado (SR) -->
+          <div id="filter-status" role="status" aria-live="polite" aria-atomic="true" class="visually-hidden">
+            Mostrando todas las mascotas
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Grid de mascotas ──────────────────────────────────── -->
+    <section class="py-5" aria-labelledby="grid-heading">
+      <div class="container">
+        <h2 id="grid-heading" class="visually-hidden">Listado de mascotas disponibles</h2>
+        <div class="row g-4" id="pet-grid">
+
+          <!-- Perro 1 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="perro" data-aos="fade-up" data-aos-delay="0">
+            <article class="pet-card" aria-label="Bruno, Labrador, 2 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/labrador/400/300"
+                     alt="Bruno, perro Labrador marrón, 2 años, adoptable en Madrid" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐶 Perro</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Bruno</h3>
+                <p class="pet-breed">Labrador · 2 años · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Esterilizado</span>
+                  <span class="tag">Con chip</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Gato 1 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="gato" data-aos="fade-up" data-aos-delay="40">
+            <article class="pet-card" aria-label="Luna, Siamés, 3 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/catsiamese/400/300"
+                     alt="Luna, gata siamesa elegante, 3 años, adoptable en Barcelona" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐱 Gato</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Luna</h3>
+                <p class="pet-breed">Siamés · 3 años · Hembra</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunada</span>
+                  <span class="tag">Esterilizada</span>
+                  <span class="tag">Interior</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Perro 2 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="perro" data-aos="fade-up" data-aos-delay="80">
+            <article class="pet-card" aria-label="Max, Beagle, 1 año">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/beagledog/400/300"
+                     alt="Max, perro Beagle juguetón, 1 año" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐶 Perro</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Max</h3>
+                <p class="pet-breed">Beagle · 1 año · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Juguetón</span>
+                  <span class="tag">Con chip</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Conejo 1 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="conejo" data-aos="fade-up" data-aos-delay="120">
+            <article class="pet-card" aria-label="Nieve, Rex, 2 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/whiterabbit/400/300"
+                     alt="Nieve, coneja Rex blanca y esponjosa, 2 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐰 Conejo</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Nieve</h3>
+                <p class="pet-breed">Rex · 2 años · Hembra</p>
+                <div class="pet-tags">
+                  <span class="tag">Esterilizada</span>
+                  <span class="tag">Sociable</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Gato 2 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="gato" data-aos="fade-up" data-aos-delay="0">
+            <article class="pet-card" aria-label="Mango, Europeo, 4 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/orangecat/400/300"
+                     alt="Mango, gato europeo naranja, 4 años, carácter tranquilo" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐱 Gato</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Mango</h3>
+                <p class="pet-breed">Europeo · 4 años · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Tranquilo</span>
+                  <span class="tag">Con chip</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Perro 3 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="perro" data-aos="fade-up" data-aos-delay="40">
+            <article class="pet-card" aria-label="Cleo, Border Collie, 3 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/bordercollie/400/300"
+                     alt="Cleo, Border Collie activa en blanco y negro, 3 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐶 Perro</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Cleo</h3>
+                <p class="pet-breed">Border Collie · 3 años · Hembra</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunada</span>
+                  <span class="tag">Activa</span>
+                  <span class="tag">Con chip</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Conejo 2 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="conejo" data-aos="fade-up" data-aos-delay="80">
+            <article class="pet-card" aria-label="Caramelo, Holandés, 1 año">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/brownrabbit/400/300"
+                     alt="Caramelo, conejo Holandés marrón y blanco, 1 año" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐰 Conejo</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Caramelo</h3>
+                <p class="pet-breed">Holandés · 1 año · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Cariñoso</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Gato 3 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="gato" data-aos="fade-up" data-aos-delay="120">
+            <article class="pet-card" aria-label="Sombra, Maine Coon, 5 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/mainecoon/400/300"
+                     alt="Sombra, gato Maine Coon gris majestuoso, 5 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐱 Gato</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Sombra</h3>
+                <p class="pet-breed">Maine Coon · 5 años · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Esterilizado</span>
+                  <span class="tag">Interior</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Perro 4 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="perro" data-aos="fade-up" data-aos-delay="0">
+            <article class="pet-card" aria-label="Rocky, Boxer, 4 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/boxerdog/400/300"
+                     alt="Rocky, perro Boxer musculoso y juguetón, 4 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐶 Perro</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Rocky</h3>
+                <p class="pet-breed">Boxer · 4 años · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Con chip</span>
+                  <span class="tag">Adiestrado</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Gato 4 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="gato" data-aos="fade-up" data-aos-delay="40">
+            <article class="pet-card" aria-label="Bolita, Persa, 2 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/persiancat/400/300"
+                     alt="Bolita, gata Persa blanca y esponjosa, 2 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐱 Gato</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Bolita</h3>
+                <p class="pet-breed">Persa · 2 años · Hembra</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunada</span>
+                  <span class="tag">Mimosa</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Perro 5 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="perro" data-aos="fade-up" data-aos-delay="80">
+            <article class="pet-card" aria-label="Tina, Teckel, 3 años">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/dachshund/400/300"
+                     alt="Tina, perra Teckel pequeña y alegre, 3 años" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐶 Perro</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Tina</h3>
+                <p class="pet-breed">Teckel · 3 años · Hembra</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunada</span>
+                  <span class="tag">Esterilizada</span>
+                  <span class="tag">Con chip</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Conejo 3 -->
+          <div class="col-sm-6 col-lg-4 col-xl-3 pet-card-wrap" data-species="conejo" data-aos="fade-up" data-aos-delay="120">
+            <article class="pet-card" aria-label="Copos, Angora, 1 año">
+              <div class="pet-img">
+                <img src="https://picsum.photos/seed/angorarabbit/400/300"
+                     alt="Copos, conejo Angora blanco y suave como la nieve, 1 año" loading="lazy" width="400" height="300" />
+                <span class="pet-species">🐰 Conejo</span>
+              </div>
+              <div class="pet-body">
+                <h3 class="pet-name">Copos</h3>
+                <p class="pet-breed">Angora · 1 año · Macho</p>
+                <div class="pet-tags">
+                  <span class="tag">Vacunado</span>
+                  <span class="tag">Tranquilo</span>
+                </div>
+                <a href="adoptar.html" class="btn btn-primary btn-sm w-100">Adoptar</a>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /.row -->
+      </div>
+    </section>
+
+    <!-- ── CTA ──────────────────────────────────────────────── -->
+    <section class="py-5" aria-labelledby="cta-mascotas">
+      <div class="container">
+        <div class="cta-section" data-aos="zoom-in">
+          <h2 id="cta-mascotas">¿No encuentras a tu compañero ideal?</h2>
+          <p class="mb-4">Déjanos tus preferencias y te avisamos cuando llegue la mascota perfecta para ti.</p>
+          <a href="adoptar.html" class="btn btn-light btn-lg fw-bold text-primary">
+            <i class="bi bi-bell me-2" aria-hidden="true"></i>Avisar cuando haya disponibilidad
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <i class="bi bi-heart-fill text-success" aria-hidden="true"></i>PetAdopt
+          </a>
+          <p>Conectamos mascotas en espera de hogar con familias que les darán el amor que merecen.</p>
+          <div class="footer-social" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Navegación</h5>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mascotas</a></li>
+            <li><a href="adoptar.html">Adoptar</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Mascotas</h5>
+          <ul>
+            <li><a href="mascotas.html">Perros</a></li>
+            <li><a href="mascotas.html">Gatos</a></li>
+            <li><a href="mascotas.html">Conejos</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contacto</h5>
+          <ul>
+            <li><i class="bi bi-envelope me-2" aria-hidden="true"></i><a href="mailto:hola@petadopt.es">hola@petadopt.es</a></li>
+            <li><i class="bi bi-telephone me-2" aria-hidden="true"></i><a href="tel:+34900000000">900 000 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2025 PetAdopt · <a href="#">Privacidad</a> · <a href="#">Términos</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Volver al inicio de la página">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmhXFCELU48kP9b3bkbNtFJtW0" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
