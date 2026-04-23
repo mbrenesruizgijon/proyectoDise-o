@@ -2,18 +2,18 @@
 // PETADOPT — Personalización de variables Bootstrap 5
 // ============================================================
 
-// Paleta de colores
-$primary:           #2E7D32;   // verde bosque
-$secondary:         #FF8F00;   // ámbar cálido
+// Paleta de colores — solo verdes
+$primary:           #2E7D32;   // verde bosque (oscuro)
+$secondary:         #81C784;   // verde claro
 $success:           #43A047;
 $info:              #0288D1;
-$warning:           #F9A825;
+$warning:           #66BB6A;   // verde medio (sustituye amarillo/naranja)
 $danger:            #C62828;
-$light:             #F9FBF7;
+$light:             #F1F8F1;   // verde muy claro de fondo
 $dark:              #1B1B1B;
 
 // Colores propios
-$color-accent:      #81C784;
+$color-accent:      #A5D6A7;   // verde muy claro para acentos
 $color-surface:     #FFFFFF;
 $color-muted:       #757575;
 $color-border:      #E0E0E0;

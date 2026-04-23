@@ -391,7 +391,7 @@
     line-height: 1;
   }
 
-  .stars { color: $warning; margin-bottom: 0.75rem; }
+  .stars { color: $primary; margin-bottom: 0.75rem; }
 
   blockquote {
     font-size: $font-size-sm;
@@ -638,7 +638,7 @@
 
 // ── Utilidades extra ─────────────────────────────────────────
 .text-primary-custom { color: $primary !important; }
-.text-secondary-custom { color: $secondary !important; }
+.text-secondary-custom { color: $secondary !important; } // verde claro
 .bg-light-green { background-color: #E8F5E9 !important; }
 
 .rounded-xl { border-radius: 1.25rem !important; }
