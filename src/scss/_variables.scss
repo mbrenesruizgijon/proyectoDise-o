@@ -32,6 +32,18 @@ $headings-line-height: 1.25;
 // Espaciado
 $spacer:             1rem;
 
+// Ampliar el mapa de spacers de Bootstrap para incluir 6 y 7
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 7,
+);
+
 // Bordes y sombras
 $border-radius:       0.5rem;
 $border-radius-sm:    0.375rem;
