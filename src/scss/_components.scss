@@ -1,7 +1,3 @@
-// ============================================================
-// PETADOPT — Componentes y utilidades personalizadas
-// ============================================================
-
 // ── Google Fonts ────────────────────────────────────────────
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
 
@@ -34,9 +30,7 @@
 
 // ── Navbar ───────────────────────────────────────────────────
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  @include flex-row(0.5rem);
   font-weight: $font-weight-bold;
   color: $primary !important;
 
@@ -105,9 +99,7 @@
   .hero-content { position: relative; z-index: 1; }
 
   .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+    @include flex-row(0.4rem, inline-flex);
     background: rgba($primary, .12);
     color: $primary;
     border-radius: $border-radius-pill;
@@ -157,9 +149,7 @@
       border-radius: $border-radius-lg;
       padding: 0.75rem 1rem;
       box-shadow: $box-shadow;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      @include flex-row(0.5rem);
       font-size: $font-size-sm;
       font-weight: $font-weight-medium;
       white-space: nowrap;
@@ -231,48 +221,33 @@
 
 // ── Feature cards ────────────────────────────────────────────
 .feature-card {
-  background: $color-surface;
-  border-radius: $card-border-radius;
-  padding: 2rem 1.5rem;
-  border: 1px solid $color-border;
-  transition: transform 0.25s, box-shadow 0.25s;
+  @include card-base(2rem 1.5rem);
+  @include hover-lift;
   height: 100%;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: $box-shadow-lg;
-  }
 
   .feature-icon {
     width: 56px;
     height: 56px;
     background: rgba($primary, .1);
     border-radius: $border-radius-lg;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     font-size: 1.6rem;
     color: $primary;
     margin-bottom: 1.25rem;
   }
 
   h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  p  { font-size: $font-size-sm; color: $color-muted; margin: 0; }
+  p  { @include text-muted-sm; margin: 0; }
 }
 
 // ── Pet cards ────────────────────────────────────────────────
 .pet-card {
-  border: 1px solid $color-border;
-  border-radius: $card-border-radius;
+  @include card-base;
+  @include hover-lift;
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
-  background: $color-surface;
   height: 100%;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: $box-shadow-lg;
-
     .pet-img img { transform: scale(1.05); }
   }
 
@@ -297,9 +272,7 @@
       padding: 0.2rem 0.65rem;
       font-size: 0.75rem;
       font-weight: $font-weight-medium;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
+      @include flex-row(0.3rem);
     }
   }
 
@@ -313,8 +286,7 @@
   }
 
   .pet-breed {
-    font-size: $font-size-sm;
-    color: $color-muted;
+    @include text-muted-sm;
     margin-bottom: 0.75rem;
   }
 
@@ -355,28 +327,18 @@
 
   .step-number {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    background: $primary;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include circle(48px, $primary, #fff);
     font-size: 1.1rem;
     font-weight: $font-weight-bold;
   }
 
   .step-content h3 { font-size: 1rem; margin-bottom: 0.25rem; }
-  .step-content p  { font-size: $font-size-sm; color: $color-muted; margin: 0; }
+  .step-content p  { @include text-muted-sm; margin: 0; }
 }
 
 // ── Testimonios ──────────────────────────────────────────────
 .testimonial-card {
-  background: $color-surface;
-  border-radius: $card-border-radius;
-  padding: 1.75rem;
-  border: 1px solid $color-border;
+  @include card-base(1.75rem);
   height: 100%;
   position: relative;
 
@@ -394,16 +356,13 @@
   .stars { color: $primary; margin-bottom: 0.75rem; }
 
   blockquote {
-    font-size: $font-size-sm;
-    color: $color-muted;
+    @include text-muted-sm;
     line-height: 1.7;
     margin: 0 0 1.25rem;
   }
 
   .author {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    @include flex-row(0.75rem);
 
     img {
       width: 44px;
@@ -479,20 +438,13 @@
 
     &::before {
       content: attr(data-step);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: $color-border;
-      color: $color-muted;
+      @include circle(36px, $color-border, $color-muted);
       font-weight: $font-weight-bold;
       margin: 0 auto 0.4rem;
       transition: all 0.3s;
     }
 
-    &.done::before  { background: $success;  color: #fff; content: '✓'; }
+    &.done::before  { background: $success; color: #fff; content: '✓'; }
     &.active::before{ background: $primary; color: #fff; }
   }
 
@@ -522,13 +474,7 @@
 
     .ss-num {
       flex-shrink: 0;
-      width: 30px;
-      height: 30px;
-      background: rgba(#fff, .2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include circle(30px, rgba(#fff, .2));
       font-weight: $font-weight-bold;
       font-size: $font-size-sm;
     }
@@ -566,12 +512,10 @@
   ul { list-style: none; padding: 0; margin: 0; li { margin-bottom: 0.4rem; } }
 
   .footer-brand {
+    @include flex-row(0.4rem);
     font-size: 1.2rem;
     font-weight: $font-weight-bold;
     color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
     margin-bottom: 0.75rem;
     text-decoration: none;
   }
@@ -582,15 +526,8 @@
     margin-top: 1.25rem;
 
     a {
-      width: 38px;
-      height: 38px;
-      background: rgba(#fff, .08);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include circle(38px, rgba(#fff, .08), #fff);
       font-size: 1rem;
-      color: #fff;
       transition: background 0.2s;
 
       &:hover { background: $primary; }
@@ -611,16 +548,9 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 44px;
-  height: 44px;
-  background: $primary;
-  color: #fff;
+  @include circle(44px, $primary, #fff);
   border: none;
-  border-radius: 50%;
   font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: $box-shadow;
   opacity: 0;
   visibility: hidden;
@@ -638,7 +568,7 @@
 
 // ── Utilidades extra ─────────────────────────────────────────
 .text-primary-custom { color: $primary !important; }
-.text-secondary-custom { color: $secondary !important; } // verde claro
+.text-secondary-custom { color: $secondary !important; }
 .bg-light-green { background-color: #E8F5E9 !important; }
 
 .rounded-xl { border-radius: 1.25rem !important; }

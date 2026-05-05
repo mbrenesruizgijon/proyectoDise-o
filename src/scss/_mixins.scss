@@ -1,0 +1,51 @@
+// ============================================================
+// PETADOPT — Mixins de utilidad
+// ============================================================
+
+// Centra contenido en ambos ejes dentro de un flex container
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex horizontal con alineación vertical y gap opcional
+// $display permite usar inline-flex cuando sea necesario
+@mixin flex-row($gap: null, $display: flex) {
+  display: $display;
+  align-items: center;
+  @if $gap { gap: $gap; }
+}
+
+// Elemento circular con contenido centrado
+@mixin circle($size, $bg: null, $color: null) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  @include flex-center;
+  @if $bg    { background: $bg; }
+  @if $color { color: $color; }
+}
+
+// Estilos base compartidos por las tarjetas del proyecto
+@mixin card-base($padding: null) {
+  background: $color-surface;
+  border-radius: $card-border-radius;
+  border: 1px solid $color-border;
+  @if $padding { padding: $padding; }
+}
+
+// Efecto de elevación al hover
+@mixin hover-lift($amount: -4px, $shadow: $box-shadow-lg) {
+  transition: transform 0.25s, box-shadow 0.25s;
+  &:hover {
+    transform: translateY($amount);
+    box-shadow: $shadow;
+  }
+}
+
+// Texto pequeño con color apagado
+@mixin text-muted-sm {
+  font-size: $font-size-sm;
+  color: $color-muted;
+}
