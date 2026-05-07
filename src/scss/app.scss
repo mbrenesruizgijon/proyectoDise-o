@@ -1,0 +1,16 @@
+// ============================================================
+// PETADOPT — Entry point Sass
+// Orden obligatorio: variables → bootstrap → componentes
+// ============================================================
+
+@import "ui/base/index";
+@import "bootstrap/scss/bootstrap";
+@import "ui/base/global";
+@import "ui/header/index";
+@import "ui/hero/index";
+@import "ui/cards/index";
+@import "ui/pets/index";
+@import "ui/testimonials/index";
+@import "ui/cta/index";
+@import "ui/form/index";
+@import "ui/footer/index";

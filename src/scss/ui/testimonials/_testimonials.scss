@@ -1,0 +1,39 @@
+// ── Testimonios ──────────────────────────────────────────────
+.testimonial-card {
+  @include card-base(1.75rem);
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: rgba($primary, .15);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .stars { color: $primary; margin-bottom: 0.75rem; }
+
+  blockquote {
+    @include text-muted-sm;
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+  }
+
+  .author {
+    @include flex-row(0.75rem);
+
+    img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    strong { display: block; font-size: $font-size-sm; }
+    span   { font-size: 0.75rem; color: $color-muted; }
+  }
+}

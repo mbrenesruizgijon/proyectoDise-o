@@ -1,0 +1,71 @@
+// ── Google Fonts ────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+
+// ── Accesibilidad ────────────────────────────────────────────
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: $primary;
+  color: #fff;
+  border-radius: 0 0 $border-radius $border-radius;
+  font-weight: $font-weight-medium;
+  transition: top 0.2s;
+
+  &:focus {
+    top: 0;
+    outline: 3px solid $secondary;
+    outline-offset: 2px;
+  }
+}
+
+// Focus visible global
+:focus-visible {
+  outline: 3px solid $secondary;
+  outline-offset: 3px;
+  border-radius: $border-radius-sm;
+}
+
+// ── Section helpers ──────────────────────────────────────────
+.section-label {
+  display: inline-block;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $primary;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: $font-weight-bold;
+  color: $dark;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 50px;
+  height: 4px;
+  background: $secondary;
+  border-radius: 2px;
+  margin: 0 auto 1.5rem;
+}
+
+// ── Utilidades extra ─────────────────────────────────────────
+.text-primary-custom { color: $primary !important; }
+.text-secondary-custom { color: $secondary !important; }
+.bg-light-green { background-color: #E8F5E9 !important; }
+
+.rounded-xl { border-radius: 1.25rem !important; }
+
+// ── Responsive tweaks ────────────────────────────────────────
+@include media-breakpoint-down(md) {
+  .hero { min-height: auto; padding: 5rem 0 3rem; }
+  .hero-img-wrap { margin-top: 2.5rem; }
+  .floating-badge { display: none !important; }
+  .cta-section { margin: 0; border-radius: 0; }
+  .form-card { padding: 1.5rem; }
+}

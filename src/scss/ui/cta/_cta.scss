@@ -1,0 +1,12 @@
+// ── CTA section ──────────────────────────────────────────────
+.cta-section {
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 12%) 100%);
+  color: #fff;
+  border-radius: $border-radius-lg;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 0 1rem;
+
+  h2 { color: #fff; }
+  p  { opacity: 0.88; }
+}

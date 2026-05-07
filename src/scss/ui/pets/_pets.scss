@@ -1,0 +1,19 @@
+// ── Filtros mascotas ─────────────────────────────────────────
+.filter-btn {
+  border-radius: $border-radius-pill;
+  padding: 0.5rem 1.25rem;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  border: 2px solid $color-border;
+  background: transparent;
+  color: $dark;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    border-color: $primary;
+    background: $primary;
+    color: #fff;
+  }
+}

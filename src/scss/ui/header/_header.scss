@@ -1,0 +1,57 @@
+// ── Navbar ───────────────────────────────────────────────────
+.navbar-brand {
+  @include flex-row(0.5rem);
+  font-weight: $font-weight-bold;
+  color: $primary !important;
+
+  .brand-icon {
+    font-size: 1.6rem;
+    color: $secondary;
+  }
+}
+
+.navbar {
+  transition: box-shadow 0.3s;
+
+  &.scrolled {
+    box-shadow: $box-shadow;
+  }
+}
+
+.nav-link {
+  position: relative;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem !important;
+  color: rgba($dark, .7) !important;
+  transition: color 0.2s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 2px;
+    background: $primary;
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  &:hover,
+  &.active {
+    color: $primary !important;
+    &::after { transform: scaleX(1); }
+  }
+}
+
+// ── Page header ──────────────────────────────────────────────
+.page-header {
+  background: linear-gradient(135deg, #E8F5E9 0%, #F9FBE7 100%);
+  padding: 6rem 0 5rem;
+
+  h1 { color: $dark; }
+}

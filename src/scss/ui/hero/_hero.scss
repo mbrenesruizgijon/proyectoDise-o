@@ -1,0 +1,143 @@
+// ── Hero ─────────────────────────────────────────────────────
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E8F5E9 0%, #F9FBE7 40%, #FFF8E1 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba($primary, .08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba($secondary, .08) 0%, transparent 50%);
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-badge {
+    @include flex-row(0.4rem, inline-flex);
+    background: rgba($primary, .12);
+    color: $primary;
+    border-radius: $border-radius-pill;
+    padding: 0.35rem 1rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    color: $dark;
+
+    .highlight {
+      color: $primary;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: rgba($secondary, .4);
+        z-index: -1;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .hero-img-wrap {
+    position: relative;
+
+    img {
+      border-radius: 2rem 2rem 2rem 0.5rem;
+      box-shadow: $box-shadow-lg;
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: #fff;
+      border-radius: $border-radius-lg;
+      padding: 0.75rem 1rem;
+      box-shadow: $box-shadow;
+      @include flex-row(0.5rem);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      white-space: nowrap;
+      animation: float 3s ease-in-out infinite;
+
+      &.badge-top { top: 1.5rem; right: -1rem; }
+      &.badge-bot { bottom: 2rem; left: -1rem; }
+
+      .icon { font-size: 1.4rem; }
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+// ── Stats bar ────────────────────────────────────────────────
+.stats-bar {
+  background: $primary;
+  color: #fff;
+  padding: 2.5rem 0;
+
+  .stat-item {
+    text-align: center;
+    padding: 0.5rem 1rem;
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: $font-size-sm;
+      opacity: 0.85;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+// ── Steps / proceso ──────────────────────────────────────────
+.step-item {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+
+  & + & { margin-top: 2rem; }
+
+  & + &::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 24px;
+    width: 2px;
+    height: 2rem;
+    background: linear-gradient(to bottom, $primary, rgba($primary,.2));
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    @include circle(48px, $primary, #fff);
+    font-size: 1.1rem;
+    font-weight: $font-weight-bold;
+  }
+
+  .step-content h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+  .step-content p  { @include text-muted-sm; margin: 0; }
+}

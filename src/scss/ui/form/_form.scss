@@ -1,0 +1,74 @@
+// ── Formulario de adopción ───────────────────────────────────
+.form-section {
+  background: $light;
+  min-height: 100vh;
+  padding: 5rem 0;
+}
+
+.form-card {
+  background: $color-surface;
+  border-radius: $card-border-radius;
+  box-shadow: $box-shadow-lg;
+  padding: 2.5rem;
+}
+
+.form-step-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .fsi-item {
+    flex: 1;
+    text-align: center;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $color-muted;
+    position: relative;
+
+    &::before {
+      content: attr(data-step);
+      @include circle(36px, $color-border, $color-muted);
+      font-weight: $font-weight-bold;
+      margin: 0 auto 0.4rem;
+      transition: all 0.3s;
+    }
+
+    &.done::before  { background: $success; color: #fff; content: '✓'; }
+    &.active::before{ background: $primary; color: #fff; }
+  }
+
+  .fsi-line {
+    flex: 1;
+    height: 2px;
+    background: $color-border;
+    margin-bottom: 1.5rem;
+
+    &.done { background: $success; }
+  }
+}
+
+.info-sidebar {
+  background: $primary;
+  color: #fff;
+  border-radius: $card-border-radius;
+  padding: 2rem 1.5rem;
+  height: 100%;
+
+  h2 { color: #fff; font-size: 1.35rem; margin-bottom: 1.25rem; }
+
+  .sidebar-step {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+
+    .ss-num {
+      flex-shrink: 0;
+      @include circle(30px, rgba(#fff, .2));
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
+    }
+
+    .ss-text strong { display: block; font-size: $font-size-sm; }
+    .ss-text span   { font-size: 0.75rem; opacity: 0.82; }
+  }
+}
