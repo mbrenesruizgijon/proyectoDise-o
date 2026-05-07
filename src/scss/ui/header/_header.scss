@@ -1,4 +1,4 @@
-// ── Navbar ───────────────────────────────────────────────────
+// Navbar
 .navbar-brand {
   @include flex-row(0.5rem);
   font-weight: $font-weight-bold;
@@ -48,7 +48,7 @@
   }
 }
 
-// ── Page header ──────────────────────────────────────────────
+// Page header
 .page-header {
   background: linear-gradient(135deg, #E8F5E9 0%, #F9FBE7 100%);
   padding: 6rem 0 5rem;

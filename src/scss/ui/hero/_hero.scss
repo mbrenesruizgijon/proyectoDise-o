@@ -1,4 +1,4 @@
-// ── Hero ─────────────────────────────────────────────────────
+// Hero
 .hero {
   min-height: 92vh;
   display: flex;
@@ -88,7 +88,7 @@
   50%       { transform: translateY(-8px); }
 }
 
-// ── Stats bar ────────────────────────────────────────────────
+// Stats bar
 .stats-bar {
   background: $primary;
   color: #fff;
@@ -113,7 +113,7 @@
   }
 }
 
-// ── Steps / proceso ──────────────────────────────────────────
+// Steps
 .step-item {
   display: flex;
   gap: 1.25rem;

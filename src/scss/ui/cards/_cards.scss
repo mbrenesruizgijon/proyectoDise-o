@@ -1,4 +1,4 @@
-// ── Feature cards ────────────────────────────────────────────
+// Feature cards 
 .feature-card {
   @include card-base(2rem 1.5rem);
   @include hover-lift;
@@ -19,7 +19,7 @@
   p  { @include text-muted-sm; margin: 0; }
 }
 
-// ── Pet cards ────────────────────────────────────────────────
+// Pet cards
 .pet-card {
   @include card-base;
   @include hover-lift;

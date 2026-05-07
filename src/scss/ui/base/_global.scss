@@ -1,7 +1,7 @@
-// ── Google Fonts ────────────────────────────────────────────
+// ── Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
 
-// ── Accesibilidad ────────────────────────────────────────────
+// ── Accesibilidad
 .skip-link {
   position: absolute;
   top: -100%;
@@ -21,14 +21,14 @@
   }
 }
 
-// Focus visible global
+// Foco visible global
 :focus-visible {
   outline: 3px solid $secondary;
   outline-offset: 3px;
   border-radius: $border-radius-sm;
 }
 
-// ── Section helpers ──────────────────────────────────────────
+// ── Section helpers
 .section-label {
   display: inline-block;
   font-size: $font-size-sm;
@@ -54,14 +54,14 @@
   margin: 0 auto 1.5rem;
 }
 
-// ── Utilidades extra ─────────────────────────────────────────
+// ── Utilidades extra
 .text-primary-custom { color: $primary !important; }
 .text-secondary-custom { color: $secondary !important; }
 .bg-light-green { background-color: #E8F5E9 !important; }
 
 .rounded-xl { border-radius: 1.25rem !important; }
 
-// ── Responsive tweaks ────────────────────────────────────────
+// ── Ajustes responsivos
 @include media-breakpoint-down(md) {
   .hero { min-height: auto; padding: 5rem 0 3rem; }
   .hero-img-wrap { margin-top: 2.5rem; }
